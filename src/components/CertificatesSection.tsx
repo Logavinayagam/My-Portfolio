@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Certificate, ArrowRight } from 'lucide-react';
+import { Award, ArrowRight } from 'lucide-react';
 
 const CertificatesSection = () => {
   const certificates = [
@@ -58,7 +58,7 @@ const CertificatesSection = () => {
                 <div className="p-6">
                   <div className="flex items-start mb-4">
                     <div className="bg-blue-500/20 p-3 rounded-lg mr-4 group-hover:bg-blue-500/30 transition-colors">
-                      <Certificate className="text-blue-400" size={24} />
+                      <Award className="text-blue-400" size={24} />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">
