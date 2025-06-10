@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { Code2, Database, Globe, Laptop } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentSkill, setCurrentSkill] = useState(0);
@@ -45,6 +46,22 @@ const HeroSection = () => {
           <div className="absolute bottom-20 right-20 w-24 h-24 border border-cyan-400/30 rotate-12 animate-bounce"></div>
           <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-purple-400/30 animate-pulse"></div>
         </div>
+
+        {/* Tech Icons Floating */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-1/4 text-blue-400/30 animate-float">
+            <Code2 size={48} />
+          </div>
+          <div className="absolute bottom-32 left-1/4 text-cyan-400/30 animate-float" style={{ animationDelay: '1s' }}>
+            <Database size={40} />
+          </div>
+          <div className="absolute top-1/3 right-20 text-purple-400/30 animate-float" style={{ animationDelay: '2s' }}>
+            <Globe size={44} />
+          </div>
+          <div className="absolute bottom-1/4 right-1/3 text-blue-400/30 animate-float" style={{ animationDelay: '0.5s' }}>
+            <Laptop size={52} />
+          </div>
+        </div>
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl">
@@ -60,19 +77,18 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in relative">
-          <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl animate-glow">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+          <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Hi, I'm Logavinayagam M
           </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-cyan-400/20 to-purple-400/20 blur-xl -z-10 animate-pulse"></div>
         </h1>
         
-        <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 animate-fade-in relative" style={{ animationDelay: '0.5s' }}>
-          <span className="drop-shadow-lg">Aspiring Software Engineer | Web Developer</span>
-          <div className="absolute inset-0 bg-blue-400/10 blur-lg -z-10 animate-pulse"></div>
+        <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          Aspiring Software Engineer | Web Developer
         </h2>
 
         <div className="text-xl md:text-2xl mb-12 h-12 flex items-center justify-center animate-fade-in" style={{ animationDelay: '1s' }}>
+          <span className="text-gray-300 mr-2">Skilled in</span>
           <span className="text-blue-400 font-mono">
             {skills[currentSkill]}
             <span className="animate-pulse">|</span>
