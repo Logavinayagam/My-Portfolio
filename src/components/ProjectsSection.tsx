@@ -32,13 +32,13 @@ const ProjectsSection = () => {
       title: 'To-Do List Website',
       description: 'Interactive task management application with drag-and-drop functionality, categories, and local storage.',
       tech: ['HTML', 'CSS', 'JavaScript', 'Local Storage'],
-      github: '#'
+      github: 'https://github.com/Logavinayagam/To-Do-List-Website'
     },
     {
       title: 'Portfolio Website',
       description: 'Responsive personal portfolio showcasing projects and skills with modern animations and smooth transitions.',
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'Animations'],
-      github: '#'
+      github: 'https://github.com/Logavinayagam/My-Portfolio'
     }
     
   ];
