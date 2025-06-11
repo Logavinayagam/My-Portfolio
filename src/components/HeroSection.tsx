@@ -3,7 +3,7 @@ import { Code2, Database, Globe, Laptop } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentSkill, setCurrentSkill] = useState(0);
-  const skills = ['C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'Python', 'Bootstrap', 'OOP'];
+  const skills = ['C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'Python', 'Prompt Engineering', 'OOP'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -101,7 +101,7 @@ const HeroSection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in" style={{ animationDelay: '1.5s' }}>
           <a 
-            href="https://drive.google.com/file/d/1sYaHdkr_yxwyT2VQZhrGfYFu2qfZYfsa/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1bYRJNprITKNdLwU73fZoBAbXHi-hU_nC/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-blue-500/25"

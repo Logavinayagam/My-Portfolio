@@ -77,7 +77,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center gap-2">
-            © 2025 Logavinayagam M. Made with React and Tailwind CSS with ❤️ Lovable.Ai
+            © All Rights Reserved Logavinayagam M (2025) | Made with ❤️ Lovable.Ai
           </p>
         </div>
       </div>
