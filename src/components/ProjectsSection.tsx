@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Github, ArrowRight } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
@@ -71,9 +70,6 @@ const ProjectsSection = () => {
                       >
                         <Github size={20} className="text-blue-400" />
                       </a>
-                      <button className="p-2 bg-blue-500/20 rounded-lg hover:bg-blue-500/30 transition-colors">
-                        <ArrowRight size={20} className="text-blue-400" />
-                      </button>
                     </div>
                   </div>
                   
