@@ -5,16 +5,28 @@ import { Github, ArrowRight } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Gym Management System',
+      title: 'Gym Management Website',
       description: 'A comprehensive web application for managing gym operations including member registration, payment tracking, and workout plans.',
       tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      github: '#'
+      github: 'https://github.com/Logavinayagam/Gym-Management-Website'
     },
     {
-      title: 'Scientific Calculator Web App',
+      title: 'Money Manager App',
+      description: 'Ai (ChatGPT) assisted - Money manager app with features like expense tracking, budget management, and financial insights.',
+      tech: ['Java', 'Android Studio', 'Firebase', 'Prompt Engineering'],
+      github: 'https://github.com/Logavinayagam/Money_Manager'
+    },
+    {
+      title: 'Task Manager',
+      description: 'Task manager app with features like task creation, task completion, and task deletion.',
+      tech: ['Java', 'IntelliJ IDEA'],
+      github: 'https://github.com/Logavinayagam/Task_Manager'
+    },
+    {
+      title: 'Web Calculator',
       description: 'Advanced calculator with scientific functions, memory operations, and history tracking built with vanilla JavaScript.',
-      tech: ['HTML', 'CSS', 'JavaScript', 'DOM Manipulation'],
-      github: '#'
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/Logavinayagam/web-calculator'
     },
     {
       title: 'To-Do List Website',
@@ -27,13 +39,8 @@ const ProjectsSection = () => {
       description: 'Responsive personal portfolio showcasing projects and skills with modern animations and smooth transitions.',
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'Animations'],
       github: '#'
-    },
-    {
-      title: 'Weather App',
-      description: 'Real-time weather application with location-based forecasts, interactive maps, and weather alerts.',
-      tech: ['JavaScript', 'Weather API', 'CSS', 'Geolocation'],
-      github: '#'
     }
+    
   ];
 
   return (

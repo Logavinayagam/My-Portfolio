@@ -1,16 +1,15 @@
-
 import React from 'react';
 
 const AboutSection = () => {
   const languages = [
     { name: 'Tamil', level: 100, description: 'Native' },
     { name: 'English', level: 85, description: 'Working Proficiency' },
-    { name: 'Hindi', level: 30, description: 'Beginner' },
-    { name: 'French', level: 25, description: 'Beginner' },
+    { name: 'Hindi', level: 20, description: 'Beginner' },
+    { name: 'French', level: 20, description: 'Beginner' },
   ];
 
   const quotes = [
-    "Always learning, always growing.",
+    "Single line of CODE can change the world",
     "The best way to predict the future is to create it."
   ];
 
@@ -25,12 +24,13 @@ const AboutSection = () => {
           <div className="space-y-6">
             <div className="bg-gray-900/60 p-8 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-colors duration-300">
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                I'm pursuing an <span className="text-blue-400 font-semibold">Integrated M.Tech in Software Engineering</span> at VIT (2022–2027). 
-                As a native Tamil speaker, I love building user-friendly websites and exploring new technologies.
+                Hi, I'm <span className="text-blue-400 font-semibold">Logavinayagam</span>, a passionate and aspiring Software Engineer currently pursuing <span className="text-blue-400 font-semibold">Integrated M.Tech in Software Engineering</span> at VIT , Vellore (2022–2027). 
+                As a enthusiastic and aspiring software engineer,  I'm driven by the goal of building impactful applications that solve real-world problems.
+                I enjoy developing clean and efficient web applications, with a growing expertise in full-stack development and database management.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm social, curious, and always eager to learn. My passion lies in creating innovative solutions 
-                that make a difference in people's lives through technology.
+                I'm social, curious, and always eager to learn. My interests also include fitness, music,
+                and learning about tech innovations. I believe my portfolio reflects the projects, skills and my journey as a software engineer.
               </p>
             </div>
 

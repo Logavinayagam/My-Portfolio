@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const SkillsSection = () => {
@@ -6,30 +5,47 @@ const SkillsSection = () => {
     {
       title: 'Programming Languages',
       skills: [
-        { name: 'C++', level: 85 },
         { name: 'Java', level: 80 },
-        { name: 'Python', level: 75 },
-        { name: 'JavaScript', level: 82 }
+        { name: 'C++', level: 65 },
+        { name: 'Python', level: 55 },
+        { name: 'Php', level: 40 },
       ]
     },
     {
-      title: 'Web Technologies',
+      title: 'Web Development',
       skills: [
-        { name: 'HTML', level: 90 },
-        { name: 'CSS', level: 85 },
-        { name: 'Bootstrap', level: 80 },
-        { name: 'Responsive Design', level: 85 }
+        { name: 'HTML', level: 70 },
+        { name: 'JavaScript', level: 60 },
+        { name: 'CSS', level: 55 },
+        { name: 'React', level: 30 },
+        { name: 'Node.js', level: 30 },
       ]
     },
     {
-      title: 'Tools & Others',
+      title: 'Databases & Cloud',
+      skills: [
+        { name: 'MySQL', level: 70 },
+        { name: 'MongoDB', level: 40 },
+        { name: 'Firebase', level: 40 },
+      ]
+    },
+    {
+      title: 'AI & Productivity',
+      skills: [
+        { name: 'ChatGPT', level: 85 },
+        { name: 'Prompt Engineering', level: 75 },
+      ]
+    },
+    {
+      title: 'Development Tools',
       skills: [
         { name: 'VS Code', level: 90 },
-        { name: 'Git', level: 75 },
-        { name: 'Google Sheets', level: 80 },
-        { name: 'ChatGPT', level: 85 }
+        { name: 'Git', level: 70 },
+        { name: 'Cursor', level: 70 },
+        { name: 'Android Studio', level: 30 },
       ]
     }
+    
   ];
 
   return (

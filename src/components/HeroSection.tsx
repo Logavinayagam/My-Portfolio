@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Code2, Database, Globe, Laptop } from 'lucide-react';
 
@@ -64,13 +63,17 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-4xl">
+      <div className="relative z-10 text-center px-4 max-w-4xl pt-20">
         {/* Profile Photo */}
-        <div className="mb-8 flex justify-center">
+        <div className="mb-12 flex justify-center">
           <div className="relative">
             <div className="w-48 h-48 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 p-1 animate-pulse">
-              <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-4xl font-bold text-blue-400">
-                LM
+              <div className="w-full h-full rounded-full bg-gray-800 overflow-hidden">
+                <img
+                  src="/images/profile.jpg"
+                  alt="Logavinayagam M"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="absolute inset-0 rounded-full bg-blue-400/20 animate-ping"></div>
@@ -88,7 +91,7 @@ const HeroSection = () => {
         </h2>
 
         <div className="text-xl md:text-2xl mb-12 h-12 flex items-center justify-center animate-fade-in" style={{ animationDelay: '1s' }}>
-          <span className="text-gray-300 mr-2">Skilled in</span>
+          <span className="text-gray-300 mr-2">Skilled in :</span>
           <span className="text-blue-400 font-mono">
             {skills[currentSkill]}
             <span className="animate-pulse">|</span>
@@ -97,9 +100,14 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in" style={{ animationDelay: '1.5s' }}>
-          <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
+          <a 
+            href="https://drive.google.com/file/d/1sYaHdkr_yxwyT2VQZhrGfYFu2qfZYfsa/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+          >
             View Resume
-          </button>
+          </a>
           <button 
             onClick={scrollToContact}
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-purple-500/25"

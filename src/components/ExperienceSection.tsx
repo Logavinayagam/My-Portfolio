@@ -6,14 +6,14 @@ const ExperienceSection = () => {
   const experiences = [
     {
       period: 'May - June 2025',
-      title: 'Web Development Intern',
+      title: 'Web Development Intern - Online',
       company: 'InternPe',
       description: 'Developed responsive web applications using modern frameworks. Gained hands-on experience in full-stack development, working with HTML, CSS, JavaScript, and various web technologies. Collaborated with senior developers on real-world projects.',
       skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design', 'Git']
     },
     {
       period: 'Oct - Nov 2023',
-      title: 'Java Programming Intern',
+      title: 'Java Programming Intern - Online',
       company: 'RineX',
       description: 'Enhanced Java programming skills through practical projects. Learned object-oriented programming concepts, data structures, and algorithms. Developed console-based applications and gained experience in debugging and code optimization.',
       skills: ['Java', 'OOP', 'Data Structures', 'Algorithms', 'Problem Solving']

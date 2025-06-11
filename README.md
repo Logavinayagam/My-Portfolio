@@ -1,22 +1,18 @@
-# Welcome to your Lovable project
+# Project Name 
 
-## Project info
+Logavinayagam Portfolio
 
-**URL**: https://lovable.dev/projects/a24e4c74-ad62-47b1-ba98-efb4e856cabb
+## Project Overview
+
+This is a modern web application built with React and TypeScript by the help of lovable.ai
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/a24e4c74-ad62-47b1-ba98-efb4e856cabb) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+You can work locally using your own IDE by cloning this repo and pushing changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +58,17 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/a24e4c74-ad62-47b1-ba98-efb4e856cabb) and click on Share -> Publish.
+To deploy this project, you can use any of the following platforms:
 
-## Can I connect a custom domain to my Lovable project?
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS Amplify
 
-Yes, you can!
+Choose the platform that best suits your needs and follow their deployment documentation.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Can I connect a custom domain to my project?
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Yes, you can connect a custom domain to your project! The process will depend on your chosen hosting platform. Most platforms provide straightforward domain configuration through their dashboard or settings pages.
+
+Check your hosting platform's documentation for specific instructions on setting up a custom domain.

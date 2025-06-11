@@ -1,43 +1,70 @@
-
 import React from 'react';
 import { Award, ArrowRight } from 'lucide-react';
 
 const CertificatesSection = () => {
   const certificates = [
     {
-      title: 'Web Development Certification',
-      issuer: 'FreeCodeCamp',
-      date: '2024',
+      title: 'Full Stack Web Development',
+      issuer: 'SmartEd Innovations',
+      date: '2025',
       description: 'Comprehensive certification covering HTML, CSS, JavaScript, and modern web development practices.',
       skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design']
     },
     {
+      title: 'Communication Skills',
+      issuer: 'TCS iON',
+      date: '2025',
+      description: 'Basic understanding of communication skills.',
+      skills: ['Communication']
+    },
+    {
+      title: 'Learn Php and MySQL for Web Application and Web Development',
+      issuer: 'Udemy',
+      date: '2025',
+      description: 'Basic understanding of Php and MySQL for Web Application and Web Development.',
+      skills: ['Php', 'MySQL']
+    },
+    {
+      title: 'The Complete HTML5 Course: From Beginner to Expert',
+      issuer: 'Udemy',
+      date: '2024',
+      description: 'Certification focused on HTML5 with a focus on modern web development practices.',
+      skills: ['HTML5']
+    },
+    {
+      title: 'Getting Started with Microsoft Excel',
+      issuer: 'Coursera',
+      date: '2024',
+      description: 'Basic understanding of Microsoft Excel.',
+      skills: ['Excel']
+    },
+    {
       title: 'Java Programming',
-      issuer: 'Oracle',
+      issuer: 'RineX',
       date: '2023',
       description: 'Advanced Java programming certification covering OOP concepts, data structures, and application development.',
       skills: ['Java', 'OOP', 'Data Structures', 'Algorithms']
     },
     {
-      title: 'Python Basics',
-      issuer: 'Python Institute',
+      title: 'Learning c++',
+      issuer: 'LinkedIn Learning',
       date: '2023',
+      description: 'Comprehensive understanding of c++ programming language.',
+      skills: ['c++']
+    },
+    {
+      title: 'Learning Java',
+      issuer: 'LinkedIn Learning',
+      date: '2023',
+      description: 'Comprehensive understanding of Java programming language.',
+      skills: ['Java']
+    },
+    {
+      title: 'Python Fundamentals for beginners',
+      issuer: 'Great Learning',
+      date: '2022',
       description: 'Foundation certification in Python programming, covering syntax, data types, and basic programming concepts.',
       skills: ['Python', 'Programming Logic', 'Data Types', 'Functions']
-    },
-    {
-      title: 'Responsive Web Design',
-      issuer: 'Google Developers',
-      date: '2024',
-      description: 'Certification focused on creating responsive, mobile-first web designs using modern CSS techniques.',
-      skills: ['CSS Grid', 'Flexbox', 'Media Queries', 'Mobile Design']
-    },
-    {
-      title: 'Git & Version Control',
-      issuer: 'GitHub',
-      date: '2024',
-      description: 'Comprehensive understanding of version control systems, Git workflows, and collaborative development.',
-      skills: ['Git', 'GitHub', 'Version Control', 'Collaboration']
     }
   ];
 

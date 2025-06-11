@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Linkedin, Github, Instagram, Contact, Mail } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
+
+// EmailJS Configuration
+const EMAILJS_CONFIG = {
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '',
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID || '',
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '',
+};
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -21,29 +29,45 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      // Prepare email data
-      const emailData = {
-        to: 'logavinayagam74@gmail.com',
-        subject: `Portfolio Contact: ${formData.name}`,
-        message: `
-Name: ${formData.name}
-Email: ${formData.email}
-Message: ${formData.message}
-        `,
-        timestamp: new Date().toISOString()
-      };
-
-      console.log('Contact form submission:', emailData);
-
-      // For now, just show success message
-      // TODO: Integrate with Supabase Edge Function for actual email sending
+    // Validate EmailJS configuration
+    if (!EMAILJS_CONFIG.PUBLIC_KEY || !EMAILJS_CONFIG.SERVICE_ID || !EMAILJS_CONFIG.TEMPLATE_ID) {
+      console.error('EmailJS configuration is missing. Please check your environment variables.');
       toast({
-        title: "Message Received!",
-        description: "Thank you for your message. I'll get back to you soon via email!",
+        title: "Configuration Error",
+        description: "Email service is not properly configured. Please contact the administrator.",
+        variant: "destructive",
       });
+      setIsSubmitting(false);
+      return;
+    }
 
-      setFormData({ name: '', email: '', message: '' });
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        {
+          to_email: 'logavinayagam74@gmail.com',
+          your_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          reply_to: formData.email,
+          title: 'New Contact Form Submission'
+        }
+      );
+
+      if (response.status === 200) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you soon via email!",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
@@ -65,13 +89,13 @@ Message: ${formData.message}
     },
     {
       name: 'GitHub',
-      url: '#',
+      url: 'https://github.com/Logavinayagam',
       icon: Github,
       color: 'hover:text-gray-300'
     },
     {
       name: 'Instagram',
-      url: '#',
+      url: 'https://www.instagram.com/logu.2004/',
       icon: Instagram,
       color: 'hover:text-pink-400'
     }
@@ -90,8 +114,12 @@ Message: ${formData.message}
             <div className="text-center md:text-left">
               <div className="flex justify-center md:justify-start mb-6">
                 <div className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 p-1">
-                  <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-2xl font-bold text-blue-400">
-                    LM
+                  <div className="w-full h-full rounded-full bg-gray-800 overflow-hidden">
+                    <img
+                      src="/images/profile.jpg"
+                      alt="Profile Picture"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
