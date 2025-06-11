@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Linkedin, Github, Instagram, Contact } from 'lucide-react';
+import { Linkedin, Github, Instagram, Contact, Mail } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -9,6 +8,7 @@ const ContactSection = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -17,13 +17,43 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Prepare email data
+      const emailData = {
+        to: 'logavinayagam74@gmail.com',
+        subject: `Portfolio Contact: ${formData.name}`,
+        message: `
+Name: ${formData.name}
+Email: ${formData.email}
+Message: ${formData.message}
+        `,
+        timestamp: new Date().toISOString()
+      };
+
+      console.log('Contact form submission:', emailData);
+
+      // For now, just show success message
+      // TODO: Integrate with Supabase Edge Function for actual email sending
+      toast({
+        title: "Message Received!",
+        description: "Thank you for your message. I'll get back to you soon via email!",
+      });
+
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
@@ -81,7 +111,7 @@ const ContactSection = () => {
                     href="mailto:logavinayagam74@gmail.com"
                     className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
                   >
-                    <Contact className="mr-3" size={18} />
+                    <Mail className="mr-3" size={18} />
                     logavinayagam74@gmail.com
                   </a>
                   <a
@@ -121,7 +151,7 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Name
+                  Name *
                 </label>
                 <input
                   type="text"
@@ -137,7 +167,7 @@ const ContactSection = () => {
               
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email
+                  Email *
                 </label>
                 <input
                   type="email"
@@ -153,7 +183,7 @@ const ContactSection = () => {
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message
+                  Message *
                 </label>
                 <textarea
                   id="message"
@@ -169,9 +199,10 @@ const ContactSection = () => {
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
