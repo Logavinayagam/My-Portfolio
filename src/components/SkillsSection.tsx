@@ -15,9 +15,10 @@ const SkillsSection = () => {
       title: 'Web Development',
       skills: [
         { name: 'HTML', level: 70 },
-        { name: 'JavaScript', level: 60 },
-        { name: 'CSS', level: 55 },
-        { name: 'React', level: 30 },
+        { name: 'JavaScript', level: 70 },
+        { name: 'CSS', level: 60 },
+        { name: 'React', level: 40 },
+        { name: 'Express', level: 30 },
         { name: 'Node.js', level: 30 },
       ]
     },
@@ -42,6 +43,7 @@ const SkillsSection = () => {
         { name: 'VS Code', level: 90 },
         { name: 'Git', level: 70 },
         { name: 'Cursor', level: 70 },
+        { name :'Power BI', level: 40},
         { name: 'Android Studio', level: 30 },
       ]
     }

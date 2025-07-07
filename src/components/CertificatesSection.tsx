@@ -6,12 +6,52 @@ const CertificatesSection = () => {
 
   const certificates = [
     {
-      title: 'Full Stack Web Development',
-      issuer: 'SmartEd Innovations',
+    title: 'Full Stack Web Development',
+    issuer: 'SmartEd Innovations',
+    date: '2025',
+    description: 'Comprehensive certification covering HTML, CSS, JavaScript, and modern web development practices.',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    image: '/images/certificates/fullstack.jpg'
+    },
+    {
+      title: 'Software Engineering Job Simulation',
+      issuer: 'Forage',
       date: '2025',
-      description: 'Comprehensive certification covering HTML, CSS, JavaScript, and modern web development practices.',
-      skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-      image: '/images/certificates/fullstack.jpg'
+      description: 'Covering Software Engineering Job Simulation with Accenture.',
+      skills: ['Software Engineering', 'Job Simulation'],
+      image: '/images/certificates/forageswe.jpg'
+    },
+    {
+      title: 'Power BI for Beginners',
+      issuer: 'Simplilearn',
+      date: '2025',
+      description: 'Comprehensive certification covering Power BI to create data visualizations and dashboards.',
+      skills: ['Power BI', 'Data Visualization', 'Data Analytics'],
+      image: '/images/certificates/powerbi.jpg'
+    },
+    {
+      title: 'Ai Workshop',
+      issuer: 'Be10X',
+      date: '2025',
+      description: 'Comprehensive certification covering AI and ChatGPT.',
+      skills: ['AI', 'ChatGPT', 'Generative AI'],
+      image: '/images/certificates/ai.jpg'
+    },
+    {
+      title: 'Fundamentals of DevOps on AWS',
+      issuer: 'Simplilearn',
+      date: '2025',
+      description: 'Comprehensive certification covering DevOps and AWS.',
+      skills: ['DevOps', 'AWS', 'Cloud Computing'],
+      image: '/images/certificates/devops.jpg'
+    },
+    {
+      title: 'ChatGPT for Everyone',
+      issuer: 'HCL GUVI',
+      date: '2025',
+      description: 'Comprehensive certification covering ChatGPT and its applications.',
+      skills: ['ChatGPT', 'Generative AI'],
+      image: '/images/certificates/chatgpt.jpg'
     },
     {
       title: 'Communication Skills',

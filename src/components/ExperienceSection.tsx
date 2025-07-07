@@ -6,6 +6,14 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
+      period: 'March - July 2025',
+      title: 'Full Stack Web Development Intern - Online',
+      company: 'SmartEd Innovations',
+      description: 'Covering Full Stack Web Development (MERN Stack) with HTML, CSS, JavaScript,React,Node.js,Express,MongoDB and modern web development practices.',
+      skills: ['MERN Stack', 'HTML', 'CSS', 'JavaScript', 'Responsive Design', 'React', 'Node.js', 'Express', 'MongoDB'],
+      certificate: '/images/certificates/fullstackintern.jpg'
+    },
+    {
       period: 'May - June 2025',
       title: 'Web Development Intern - Online',
       company: 'InternPe',

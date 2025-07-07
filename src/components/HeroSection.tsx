@@ -3,7 +3,7 @@ import { Code2, Database, Globe, Laptop } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentSkill, setCurrentSkill] = useState(0);
-  const skills = ['C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'Python', 'Prompt Engineering', 'OOP'];
+    const skills = ['C++', 'Java', 'HTML', 'CSS', 'JavaScript', 'Python', 'Prompt Engineering', 'OOP', 'MERN Stack'];
 
   useEffect(() => {
     const interval = setInterval(() => {
