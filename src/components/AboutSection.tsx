@@ -4,7 +4,7 @@ const AboutSection = () => {
   const languages = [
     { name: 'Tamil', level: 100, description: 'Native' },
     { name: 'English', level: 85, description: 'Working Proficiency' },
-    { name: 'Hindi', level: 20, description: 'Beginner' },
+    { name: 'Hindi', level: 30, description: 'Beginner' },
     { name: 'French', level: 20, description: 'Beginner' },
   ];
 

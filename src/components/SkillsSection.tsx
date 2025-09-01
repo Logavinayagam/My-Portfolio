@@ -6,9 +6,9 @@ const SkillsSection = () => {
       title: 'Programming Languages',
       skills: [
         { name: 'Java', level: 80 },
-        { name: 'C++', level: 65 },
-        { name: 'Python', level: 55 },
-        { name: 'Php', level: 40 },
+        { name: 'C', level: 65 },
+        //{ name: 'Python', level: 55 },
+        //{ name: 'Php', level: 40 },
       ]
     },
     {
@@ -41,10 +41,11 @@ const SkillsSection = () => {
       title: 'Development Tools',
       skills: [
         { name: 'VS Code', level: 90 },
-        { name: 'Git', level: 70 },
+        { name: 'Git & GitHub', level: 70 },
+        { name: 'Jira', level: 60 },
         { name: 'Cursor', level: 70 },
-        { name :'Power BI', level: 40},
-        { name: 'Android Studio', level: 30 },
+        //{ name :'Power BI', level: 40},
+        //{ name: 'Android Studio', level: 30 },
       ]
     }
     
